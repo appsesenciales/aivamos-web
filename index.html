@@ -354,15 +354,17 @@
             animation: fadeUp 1s ease 0.3s both;
         }
 
-        .phone-mockup {
-            width: 300px;
-            height: 620px;
-            background: var(--gray-900);
-            border-radius: 44px;
-            padding: 12px;
-            box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 2;
+       .phone-mockup {
+        width: 300px;
+        height: 620px;
+         max-width: 80vw;
+         background: var(--gray-900);
+        border-radius: 44px;
+        padding: 12px;
+         box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 2;
+        aspect-ratio: 300 / 620;
         }
 
         .phone-mockup-inner {
@@ -375,10 +377,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 40px 24px;
+            padding: 40px 20px;
             text-align: center;
             color: white;
             position: relative;
+            gap: 2px;
         }
 
         .phone-notch {
@@ -1024,8 +1027,9 @@
             }
 
             .phone-mockup {
-                width: 260px;
-                height: 540px;
+            width: 260px;
+             height: auto;
+             aspect-ratio: 300 / 620;
             }
 
             .float-card {
@@ -1082,12 +1086,64 @@
             }
 
             .phone-mockup {
-                width: 240px;
-                height: 500px;
+             width: min(240px, 70vw);
+             height: auto;
+            aspect-ratio: 300 / 620;
+             border-radius: 36px;
+             padding: 8px;
+        }
+
+        .phone-mockup-inner {
+             border-radius: 28px;
+            padding: 28px 14px;
             }
 
+        .phone-notch {
+            width: 90px;
+             height: 22px;
+             border-radius: 0 0 12px 12px;
+        }
+
+        .phone-greeting {
+            font-size: 0.85rem;
+            margin-top: 14px;
+        }
+
+        .phone-name {
+             font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .phone-date {
+             font-size: 0.7rem;
+             margin-bottom: 20px;
+            }
+
+        .phone-btn-icon {
+        width: 40px;
+         height: 40px;
+            border-radius: 12px;
+         font-size: 1.2rem;
+        }
+
+        .phone-btn-title {
+              font-size: 0.85rem;
+            }
+
+        .phone-btn-sub {
+            font-size: 0.65rem;
+            }
+
+        .phone-footer-text {
+             margin-top: 16px;
+            font-size: 0.75rem;
+        }
+
             .phone-btn-main {
-                padding: 16px 14px;
+                 padding: 12px 10px;
+                 gap: 10px;
+                 margin-bottom: 10px;
+                border-radius: 14px;
             }
 
             .profile-card {
@@ -1453,7 +1509,7 @@
             <div class="footer-links">
                 <a href="https://sites.google.com/view/polticaprivacidadappaivamos/inicio" target="_blank">Política de privacidad</a>
                 <a href="https://sites.google.com/view/polticaprivacidadappaivamos/eliminar-cuenta" target="_blank">Eliminar cuenta</a>
-                <a href="mailto:apps.esenciales@gmail.com">Contacto</a>
+                <a href="mailto:apps.esenciales@gmail.com">Contacto: apps.esenciales@gmail.com</a>
             </div>
         </div>
     </footer>
