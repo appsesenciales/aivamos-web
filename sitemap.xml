@@ -31,12 +31,5 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Política de privacidad (enlazada desde el footer) -->
-  <url>
-    <loc>https://sites.google.com/view/polticaprivacidadappaivamos/inicio</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 
 </urlset>
