@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NP33HB7H');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AiVamos — Tranquilidad para toda la familia</title>
@@ -23,6 +30,10 @@
             --naranja: #F59E0B;
             --naranja-light: #FFF7ED;
             --rojo: #EF4444;
+            --morado: #8B5CF6;
+            --morado-light: #F5F3FF;
+            --rosa: #EC4899;
+            --rosa-light: #FDF2F8;
             --warm-50: #FFFBF5;
             --warm-100: #FFF5E8;
             --warm-200: #FFE8C8;
@@ -516,35 +527,121 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ============ EMOTIONAL QUOTE ============ */
-        .quote-section {
-            padding: 80px 24px;
-            text-align: center;
+        /* ============ FOR WHOM SECTION ============ */
+        .forwhom-section {
+            padding: 100px 24px;
             background: linear-gradient(180deg, var(--warm-50) 0%, var(--white) 100%);
         }
 
-        .quote-inner {
-            max-width: 800px;
+        .forwhom-inner {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .quote-text {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
-            color: var(--gray-800);
-            line-height: 1.5;
-            margin-bottom: 20px;
+        .forwhom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 0;
         }
 
-        .quote-text em {
-            color: var(--verde-deep);
-            font-style: normal;
+        .forwhom-card {
+            border-radius: var(--radius);
+            padding: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
 
-        .quote-author {
+        .forwhom-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: inherit;
+        }
+
+        .forwhom-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .forwhom-card.card-green {
+            background: var(--verde-light);
+            border-color: rgba(46,204,113,0.2);
+        }
+
+        .forwhom-card.card-green:hover {
+            border-color: rgba(46,204,113,0.4);
+        }
+
+        .forwhom-card.card-blue {
+            background: var(--azul-light);
+            border-color: rgba(59,130,246,0.2);
+        }
+
+        .forwhom-card.card-blue:hover {
+            border-color: rgba(59,130,246,0.4);
+        }
+
+        .forwhom-card.card-purple {
+            background: var(--morado-light);
+            border-color: rgba(139,92,246,0.2);
+        }
+
+        .forwhom-card.card-purple:hover {
+            border-color: rgba(139,92,246,0.4);
+        }
+
+        .forwhom-card.card-pink {
+            background: var(--rosa-light);
+            border-color: rgba(236,72,153,0.2);
+        }
+
+        .forwhom-card.card-pink:hover {
+            border-color: rgba(236,72,153,0.4);
+        }
+
+        .forwhom-emoji-wrap {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .forwhom-card.card-green .forwhom-emoji-wrap { background: rgba(46,204,113,0.2); }
+        .forwhom-card.card-blue .forwhom-emoji-wrap { background: rgba(59,130,246,0.2); }
+        .forwhom-card.card-purple .forwhom-emoji-wrap { background: rgba(139,92,246,0.2); }
+        .forwhom-card.card-pink .forwhom-emoji-wrap { background: rgba(236,72,153,0.2); }
+
+        .forwhom-text {}
+
+        .forwhom-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .forwhom-desc {
             font-size: 1rem;
-            color: var(--gray-400);
+            color: var(--gray-600, #57534E);
+            line-height: 1.6;
         }
+
+        .forwhom-card.card-green .forwhom-title { color: var(--verde-deep); }
+        .forwhom-card.card-blue .forwhom-title { color: var(--azul-deep); }
+        .forwhom-card.card-purple .forwhom-title { color: #6D28D9; }
+        .forwhom-card.card-pink .forwhom-title { color: #BE185D; }
 
         /* ============ HOW IT WORKS ============ */
         .how-section {
@@ -1057,6 +1154,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .forwhom-grid {
+                grid-template-columns: 1fr;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -1154,6 +1255,12 @@
                 padding: 28px;
             }
 
+            .forwhom-card {
+                padding: 28px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -1175,6 +1282,11 @@
 </head>
 <body>
 
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP33HB7H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <!-- NAV -->
     <nav id="navbar">
         <div class="nav-inner">
@@ -1183,6 +1295,7 @@
                 <span class="nav-logo-text">AiVamos</span>
             </a>
             <div class="nav-links">
+                <a href="#para-quien">Para quién</a>
                 <a href="#como-funciona">Cómo funciona</a>
                 <a href="#funcionalidades">Funcionalidades</a>
                 <a href="#historia">Nuestra historia</a>
@@ -1271,13 +1384,44 @@
         </div>
     </section>
 
-    <!-- EMOTIONAL QUOTE -->
-    <section class="quote-section">
-        <div class="quote-inner reveal">
-            <p class="quote-text">
-                «Cuando éramos pequeños, nuestros padres se preocupaban por nuestros medicamentos. <em>Ahora es nuestro turno.</em>»
-            </p>
-            <p class="quote-author">— La filosofía detrás de AiVamos</p>
+    <!-- FOR WHOM SECTION (replaces emotional quote) -->
+    <section class="forwhom-section" id="para-quien">
+        <div class="forwhom-inner">
+            <div class="section-header reveal">
+                <span class="section-label">¿Para quién es AiVamos?</span>
+                <h2 class="section-title">No hace falta parentesco para ser familia.</h2>
+                <p class="section-subtitle">Cualquier persona que quieras tener cerca, aunque esté lejos, puede estar en tu AiVamos.</p>
+            </div>
+            <div class="forwhom-grid reveal">
+                <div class="forwhom-card card-green">
+                    <div class="forwhom-emoji-wrap">👵</div>
+                    <div class="forwhom-text">
+                        <h3 class="forwhom-title">Personas mayores que viven solas</h3>
+                        <p class="forwhom-desc">Un check-in diario que da tranquilidad a toda la familia. Sin complicaciones, sin pantallas difíciles. Solo un botón grande cada mañana.</p>
+                    </div>
+                </div>
+                <div class="forwhom-card card-blue">
+                    <div class="forwhom-emoji-wrap">🧑‍🦽</div>
+                    <div class="forwhom-text">
+                        <h3 class="forwhom-title">Personas dependientes que viven solas</h3>
+                        <p class="forwhom-desc">Para quienes necesitan un poco más de apoyo en su día a día. Recordatorios de medicación, citas y la posibilidad de avisar a su red de cuidado con un gesto.</p>
+                    </div>
+                </div>
+                <div class="forwhom-card card-purple">
+                    <div class="forwhom-emoji-wrap">🎓</div>
+                    <div class="forwhom-text">
+                        <h3 class="forwhom-title">Hijos e hijas que viven fuera de casa</h3>
+                        <p class="forwhom-desc">Estudiar lejos no significa desconectarse. Un «hoy estoy bien» diario mantiene el vínculo sin agobiar ni llamar a deshora.</p>
+                    </div>
+                </div>
+                <div class="forwhom-card card-pink">
+                    <div class="forwhom-emoji-wrap">🤝</div>
+                    <div class="forwhom-text">
+                        <h3 class="forwhom-title">Amigos y personas de confianza</h3>
+                        <p class="forwhom-desc">No hace falta ser familia. A veces quien más cuida es un amigo de toda la vida. AiVamos conecta a quienes se quieren, sin importar el parentesco.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
