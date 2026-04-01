@@ -1274,6 +1274,139 @@
             }
         }
 
+        /* ============ TUTORIALES ============ */
+        .tutorials-section {
+            padding: 100px 24px;
+            background: var(--warm-100);
+        }
+
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .tutorial-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+
+        .tutorial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .tutorial-video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 177.78%; /* 9:16 ratio for YouTube Shorts */
+            background: var(--gray-900);
+            overflow: hidden;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+        }
+
+        .tutorial-thumb {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, opacity 0.3s ease;
+        }
+
+        .tutorial-video-wrapper:hover .tutorial-thumb {
+            transform: scale(1.04);
+            opacity: 0.85;
+        }
+
+        .tutorial-play-btn {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px; height: 56px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 2;
+        }
+
+        .tutorial-play-btn::after {
+            content: '';
+            display: block;
+            width: 0; height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent var(--gray-900);
+            margin-left: 4px;
+        }
+
+        .tutorial-video-wrapper:hover .tutorial-play-btn {
+            transform: translate(-50%, -50%) scale(1.12);
+            background: var(--verde);
+        }
+
+        .tutorial-video-wrapper:hover .tutorial-play-btn::after {
+            border-color: transparent transparent transparent white;
+        }
+
+        .tutorial-yt-badge {
+            position: absolute;
+            top: 10px; right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .tutorial-info {
+            padding: 20px;
+        }
+
+        .tutorial-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--verde-light);
+            color: var(--verde-deep);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .tutorial-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 960px) {
+            .tutorials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tutorials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ============ SCROLL ANIMATIONS ============ */
         .reveal {
             opacity: 0;
@@ -1305,6 +1438,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="#para-quien">Para quién</a>
                 <a href="#como-funciona">Cómo funciona</a>
                 <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#tutoriales">Aprende a usarme</a>
                 <a href="#historia">Nuestra historia</a>
                 <a href="#descargar" class="nav-cta">Descargar gratis</a>
             </div>
@@ -1622,6 +1756,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
+    <!-- TUTORIALES -->
+    <section class="tutorials-section" id="tutoriales">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-label">📹 Videotutoriales</span>
+                <h2 class="section-title">Aprende a usarme</h2>
+                <p class="section-desc">Todos los vídeos que necesitas para empezar con AiVamos en minutos</p>
+            </div>
+            <div class="tutorials-grid">
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/f2YdVU0OU0w" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Primera vez con la app AiVamos">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/f2YdVU0OU0w/hqdefault.jpg" alt="Primera vez con la app AiVamos" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">1</div>
+                        <p class="tutorial-title">Primera vez con la app AiVamos</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/APZHK8hr5pU" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Registrarse como familiar y vincular el ser querido">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/APZHK8hr5pU/hqdefault.jpg" alt="Registrarse como familiar y vincular el ser querido" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">2</div>
+                        <p class="tutorial-title">Registrarse como familiar y vincular el ser querido</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/tQT1mS8Qmho" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Primer Checkin diario del ser querido">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/tQT1mS8Qmho/hqdefault.jpg" alt="Primer Checkin diario del ser querido" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">3</div>
+                        <p class="tutorial-title">Primer Checkin diario del ser querido</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/n9q5vV8uY0k" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Activar alarma sonora en el checkin diario del ser querido">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/n9q5vV8uY0k/hqdefault.jpg" alt="Activar alarma sonora en el checkin diario del ser querido" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">4</div>
+                        <p class="tutorial-title">Activar alarma sonora en el checkin diario del ser querido</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/AP9RXrUhK4U" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Recordatorios del día como medicación">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/AP9RXrUhK4U/hqdefault.jpg" alt="Recordatorios del día como medicación" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">5</div>
+                        <p class="tutorial-title">Recordatorios del día como medicación</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/dwrD3CxJVV0" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Configuración del ser querido y de la familia">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/dwrD3CxJVV0/hqdefault.jpg" alt="Configuración del ser querido y de la familia" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">6</div>
+                        <p class="tutorial-title">Configuración del ser querido y de la familia</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/woipK-y0I2k" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Activación del recordatorio de llamada del familiar">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/woipK-y0I2k/hqdefault.jpg" alt="Activación del recordatorio de llamada del familiar" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">7</div>
+                        <p class="tutorial-title">Activación del recordatorio de llamada del familiar</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/HqvMaQ4WrLU" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Eliminación y cambio de ser querido">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/HqvMaQ4WrLU/hqdefault.jpg" alt="Eliminación y cambio de ser querido" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">8</div>
+                        <p class="tutorial-title">Eliminación y cambio de ser querido</p>
+                    </div>
+                </div>
+                <div class="tutorial-card reveal">
+                    <a class="tutorial-video-wrapper" href="https://youtube.com/shorts/EyqRxyrsVWA" target="_blank" rel="noopener noreferrer" aria-label="Ver vídeo: Eliminación de la cuenta de AiVamos">
+                        <img class="tutorial-thumb" src="https://i.ytimg.com/vi/EyqRxyrsVWA/hqdefault.jpg" alt="Eliminación de la cuenta de AiVamos" loading="lazy">
+                        <div class="tutorial-play-btn"></div>
+                        <span class="tutorial-yt-badge">YouTube Shorts</span>
+                    </a>
+                    <div class="tutorial-info">
+                        <div class="tutorial-number">9</div>
+                        <p class="tutorial-title">Eliminación de la cuenta de AiVamos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA FINAL -->
     <section class="cta-section" id="descargar">
         <div class="cta-inner reveal">
@@ -1660,12 +1906,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-links">
                 <a href="https://sites.google.com/view/polticaprivacidadappaivamos/inicio" target="_blank">Política de privacidad</a>
                 <a href="https://sites.google.com/view/polticaprivacidadappaivamos/eliminar-cuenta" target="_blank">Eliminar cuenta</a>
-                <a href="mailto:apps.esenciales@gmail.com">Contacto: apps.esenciales@gmail.com</a>
+                <a href="/cdn-cgi/l/email-protection#9ffeefefecb1faecfaf1fcf6fef3faecdff8f2fef6f3b1fcf0f2">Contacto: <span class="__cf_email__" data-cfemail="37564747441952445259545e565b524477505a565e5b1954585a">[email&#160;protected]</span></a>
             </div>
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Nav scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -1717,9 +1963,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     // Close mobile menu if open
-                    const links = document.querySelector('.nav-links');
-                    if (window.innerWidth <= 960) {
-                        links.style.display = 'none';
+                    const navLinks = document.querySelector('.nav-links');
+                    if (navLinks.style.display === 'flex' && navLinks.style.flexDirection === 'column') {
+                        navLinks.style.display = 'none';
                     }
                 }
             });
