@@ -1407,6 +1407,276 @@
             }
         }
 
+        /* ============ COLABORADORES (AYUNTAMIENTOS) ============ */
+        .collab-section {
+            padding: 100px 24px;
+            background: linear-gradient(180deg, var(--white) 0%, var(--azul-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collab-section::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .collab-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .collab-main-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 56px 48px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid rgba(59,130,246,0.15);
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        .collab-badge-showcase {
+            text-align: center;
+            padding: 32px 24px;
+            background: linear-gradient(135deg, var(--azul-light) 0%, #DBEAFE 100%);
+            border-radius: var(--radius);
+            border: 1px dashed rgba(59,130,246,0.3);
+        }
+
+        .collab-badge-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-deep) 100%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            box-shadow: 0 12px 40px rgba(59,130,246,0.35);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .collab-badge-icon::after {
+            content: '✓';
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--verde);
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .collab-badge-label {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--azul-deep);
+            margin-bottom: 4px;
+        }
+
+        .collab-badge-sub {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+
+        .collab-content h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.9rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .collab-content p.collab-intro {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .collab-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 28px;
+        }
+
+        .collab-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 1rem;
+            color: var(--gray-800);
+            line-height: 1.5;
+        }
+
+        .collab-list li::before {
+            content: '✓';
+            color: var(--azul);
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+
+        .collab-contact-box {
+            background: linear-gradient(135deg, var(--azul-light) 0%, #DBEAFE 100%);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid rgba(59,130,246,0.2);
+        }
+
+        .collab-contact-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .collab-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-deep) 100%);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(59,130,246,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .collab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(59,130,246,0.45);
+        }
+
+        .collab-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: var(--white);
+            color: var(--azul-deep);
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid var(--azul);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .collab-btn-secondary:hover {
+            background: var(--azul-light);
+            transform: translateY(-2px);
+        }
+
+        .collab-btn-secondary.copied {
+            background: var(--verde);
+            color: var(--white);
+            border-color: var(--verde);
+        }
+
+        .collab-email-display {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 12px 16px;
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .collab-email-label {
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+
+        .collab-email-link {
+            color: var(--azul-deep);
+            font-weight: 700;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .collab-email-link:hover {
+            text-decoration: underline;
+        }
+
+        .collab-note {
+            font-size: 0.88rem;
+            color: var(--gray-500);
+            font-style: italic;
+        }
+
+        .collab-fineprint {
+            max-width: 800px;
+            margin: 28px auto 0;
+            padding: 18px 24px;
+            background: rgba(255,255,255,0.7);
+            border-left: 3px solid var(--azul);
+            border-radius: 8px;
+            font-size: 0.92rem;
+            color: var(--gray-700);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        @media (max-width: 960px) {
+            .collab-main-card {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 28px;
+            }
+            .collab-badge-showcase {
+                padding: 28px 20px;
+            }
+            .collab-content h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .collab-section {
+                padding: 80px 20px;
+            }
+            .collab-badge-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 2.8rem;
+            }
+        }
+
         /* ============ SCROLL ANIMATIONS ============ */
         .reveal {
             opacity: 0;
@@ -1439,6 +1709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="#como-funciona">Cómo funciona</a>
                 <a href="#funcionalidades">Funcionalidades</a>
                 <a href="#tutoriales">Aprende a usarme</a>
+                <a href="#ayuntamientos">Ayuntamientos</a>
                 <a href="#historia">Nuestra historia</a>
                 <a href="#descargar" class="nav-cta">Descargar gratis</a>
             </div>
@@ -1893,6 +2164,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
+    <!-- AYUNTAMIENTOS COLABORADORES -->
+    <section class="collab-section" id="ayuntamientos">
+        <div class="collab-inner">
+            <div class="section-header reveal">
+                <span class="section-label">🏛️ Para ayuntamientos y entidades</span>
+                <h2 class="section-title">Ayuntamientos colaboradores</h2>
+                <p class="section-subtitle">Acercamos AiVamos a las personas vulnerables de tu municipio con talleres formativos <strong>presenciales u online</strong>. Los ayuntamientos que organicen estas formaciones reciben un reconocimiento institucional dentro de la app.</p>
+            </div>
+
+            <div class="collab-main-card reveal">
+                <div class="collab-badge-showcase">
+                    <div class="collab-badge-icon">🏛️</div>
+                    <p class="collab-badge-label">Entidad colaboradora</p>
+                    <p class="collab-badge-sub">Insignia oficial visible dentro de AiVamos</p>
+                </div>
+
+                <div class="collab-content">
+                    <h3>Reconocimiento institucional para tu municipio</h3>
+                    <p class="collab-intro">
+                        Los ayuntamientos, mancomunidades y entidades locales que organicen talleres formativos sobre AiVamos —dirigidos a personas vulnerables, familiares cuidadores o equipos técnicos de servicios sociales— reciben una insignia oficial dentro de la aplicación como <strong>entidad colaboradora</strong>.
+                    </p>
+
+                    <ul class="collab-list">
+                        <li>Insignia institucional visible para todos los usuarios</li>
+                        <li>Talleres formativos, adaptados a personas vulnerables o a equipos técnicos municipales</li>
+                        <li>Material formativo, soporte directo y atención personalizada</li>
+                        <li>Refuerzo de la imagen del ayuntamiento como entidad innovadora en el cuidado de personas vulnerables</li>
+                    </ul>
+
+                    <div class="collab-contact-box">
+                        <div class="collab-contact-row">
+                            <a href="mailto:apps.esenciales@gmail.com?subject=Información%20talleres%20AiVamos%20-%20Ayuntamiento&body=Hola%2C%0A%0AEstoy%20interesado%2Fa%20en%20recibir%20información%20sobre%20los%20talleres%20formativos%20de%20AiVamos%20para%20mi%20entidad.%0A%0AEntidad%3A%20%0APersona%20de%20contacto%3A%20%0ATeléfono%3A%20%0ATipo%20de%20taller%20de%20interés%20(presencial%20%2F%20online)%3A%20%0A%0AGracias." class="collab-btn" id="collabMailBtn">
+                                <span>✉️</span>
+                                <span>Escribir email</span>
+                            </a>
+                            <button type="button" class="collab-btn-secondary" id="collabCopyBtn" onclick="copyCollabEmail(event)">
+                                <span id="collabCopyIcon">📋</span>
+                                <span id="collabCopyText">Copiar email</span>
+                            </button>
+                        </div>
+                        <p class="collab-email-display">
+                            <span class="collab-email-label">Contacto directo:</span>
+                            <a href="mailto:apps.esenciales@gmail.com" class="collab-email-link" id="collabEmailLink">apps.esenciales@gmail.com</a>
+                        </p>
+                        <p class="collab-note">Respuesta en menos de 48h · Atendido personalmente por Alberto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collab-fineprint reveal">
+                Los talleres formativos se realizan bajo condiciones específicas que se detallan al solicitar información, incluidos los aspectos organizativos y económicos. Cada propuesta se adapta al tamaño del municipio y al perfil de los asistentes.
+            </div>
+        </div>
+    </section>
+
     <!-- CTA FINAL -->
     <section class="cta-section" id="descargar">
         <div class="cta-inner reveal">
@@ -1995,6 +2321,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             });
         });
+
+        // Copiar email de colaboradores al portapapeles
+        function copyCollabEmail(e) {
+            e.preventDefault();
+            const email = 'apps.esenciales@gmail.com';
+            const btn = document.getElementById('collabCopyBtn');
+            const icon = document.getElementById('collabCopyIcon');
+            const text = document.getElementById('collabCopyText');
+
+            const showCopied = () => {
+                btn.classList.add('copied');
+                icon.textContent = '✓';
+                text.textContent = '¡Copiado!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    icon.textContent = '📋';
+                    text.textContent = 'Copiar email';
+                }, 2200);
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(showCopied).catch(() => {
+                    // Fallback si la API moderna falla
+                    fallbackCopy(email, showCopied);
+                });
+            } else {
+                fallbackCopy(email, showCopied);
+            }
+        }
+
+        function fallbackCopy(text, onSuccess) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'absolute';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                onSuccess();
+            } catch (err) {
+                alert('No se pudo copiar automáticamente. Email: ' + text);
+            }
+            document.body.removeChild(ta);
+        }
     </script>
 </body>
 </html>
