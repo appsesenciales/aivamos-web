@@ -1677,6 +1677,256 @@
             }
         }
 
+        /* ============ CHECK-IN INMEDIATO ============ */
+        .feature-card.feature-wide {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            border: 2px solid rgba(139,92,246,0.25);
+            background: linear-gradient(135deg, var(--white) 0%, var(--morado-light) 100%);
+        }
+
+        .feature-icon.purple { background: rgba(139,92,246,0.15); }
+
+        .new-pill {
+            display: inline-block;
+            background: var(--morado);
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 50px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .instant-flow {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .instant-flow li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            font-size: 0.98rem;
+            color: var(--gray-700);
+            line-height: 1.45;
+        }
+
+        .instant-flow li strong { color: var(--gray-900); }
+
+        .instant-flow-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--morado);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .instant-note {
+            margin-top: 16px;
+            font-size: 0.88rem;
+            color: var(--gray-500);
+        }
+
+        @media (max-width: 960px) {
+            .feature-card.feature-wide {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+
+        /* ============ PANEL MUNICIPAL + VÍDEO ============ */
+        .collab-section .section-header { margin-bottom: 40px; }
+
+        .panel-block {
+            margin-top: 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid rgba(59,130,246,0.15);
+        }
+
+        .panel-block-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 32px;
+        }
+
+        .panel-block-header h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.9rem;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .panel-block-header p {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+
+        .panel-video {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--gray-900);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .panel-video video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: var(--gray-900);
+        }
+
+        .panel-video-caption {
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--gray-500);
+            margin-top: 12px;
+        }
+
+        .panel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .panel-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 22px;
+            border-radius: var(--radius-sm);
+            background: var(--azul-light);
+            border: 1px solid rgba(59,130,246,0.15);
+        }
+
+        .panel-item-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .panel-item h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .panel-item p {
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            line-height: 1.55;
+        }
+
+        .license-compare {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .license-card {
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+
+        .license-card.vecinos {
+            background: var(--verde-light);
+            border: 2px solid rgba(46,204,113,0.3);
+        }
+
+        .license-card.ayto {
+            background: var(--white);
+            border: 2px solid var(--azul-deep);
+        }
+
+        .license-kicker {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 4px;
+        }
+
+        .license-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 14px;
+        }
+
+        .license-card ul {
+            list-style: none;
+        }
+
+        .license-card li {
+            padding: 6px 0;
+            font-size: 0.97rem;
+            color: var(--gray-700);
+            display: flex;
+            gap: 10px;
+        }
+
+        .license-card.vecinos li::before { content: '✓'; color: var(--verde-deep); font-weight: 800; }
+        .license-card.ayto li::before { content: '✓'; color: var(--azul-deep); font-weight: 800; }
+
+        .panel-teleasistencia {
+            margin-top: 28px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 960px) {
+            .panel-block { padding: 36px 24px; }
+            .panel-grid, .license-compare { grid-template-columns: 1fr; }
+            .panel-block-header h3 { font-size: 1.6rem; }
+        }
+
+        @media (max-width: 600px) {
+            .panel-block { padding: 28px 16px; }
+            .panel-item { padding: 18px; }
+        }
+
         /* ============ SCROLL ANIMATIONS ============ */
         .reveal {
             opacity: 0;
@@ -1745,13 +1995,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 ">
-    🚀 <strong style="font-size: 1.15rem;">Nuevo: Grupo familiar ampliado</strong><br>
+    🚀 <strong style="font-size: 1.15rem;">Nuevo: pregunta «¿Estás bien?» al momento</strong><br>
     <span style="
         font-weight: 500;
         color: var(--gray-700);
         font-size: 0.9rem;
     ">
-        Hasta 3 familiares y 2 seres queridos
+        Su móvil suena aunque la app esté cerrada · Hasta 3 familiares y 2 seres queridos
     </span>
 </p>
                 
@@ -1766,7 +2016,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="hero-trust">
                     <div class="hero-trust-stars">★★★★★</div>
-                    <span class="hero-trust-text">Gratis para siempre · Sin publicidad · Sin datos vendidos</span>
+                    <span class="hero-trust-text">Gratis para siempre</span>
                 </div>
             </div>
             <div class="hero-visual">
@@ -1918,6 +2168,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3 class="feature-title">Alertas automáticas</h3>
                     <p class="feature-desc">Si tu ser querido no confirma su check-in en el plazo configurado, recibes una notificación push.</p>
                 </div>
+                <div class="feature-card feature-wide reveal" id="checkin-inmediato">
+                    <div>
+                        <div class="feature-icon purple">🙋</div>
+                        <h3 class="feature-title">Check-in inmediato «¿Estás bien?» <span class="new-pill">Nuevo</span></h3>
+                        <p class="feature-desc">¿Te ha entrado la preocupación a media tarde? No esperes al check-in de mañana: pregunta en el momento desde tu móvil. A tu ser querido le suena un aviso como un despertador, incluso con el móvil bloqueado o la app cerrada, y responde con un solo toque.</p>
+                        <p class="instant-note">Hasta 2 preguntas al día por ser querido, para acompañar sin agobiar.</p>
+                    </div>
+                    <ol class="instant-flow">
+                        <li><span class="instant-flow-num">1</span><span><strong>Preguntas «¿Estás bien?»</strong> desde la tarjeta de tu ser querido.</span></li>
+                        <li><span class="instant-flow-num">2</span><span><strong>Su móvil suena al momento</strong> y pulsa «Estoy bien».</span></li>
+                        <li><span class="instant-flow-num">3</span><span><strong>Ves a qué hora respondió</strong>, o recibes un aviso si no contesta en el plazo que elijas (10 minutos por defecto).</span></li>
+                    </ol>
+                </div>
                 <div class="feature-card reveal">
                     <div class="feature-icon blue">💊</div>
                     <h3 class="feature-title">Recordatorios de medicación</h3>
@@ -1947,6 +2210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3 class="profile-title">Pantalla simple, botones grandes</h3>
                     <ul class="profile-features">
                         <li><span>✅</span> Botón «Hoy estoy bien»</li>
+                        <li><span>🙋</span> Responder «¿Estás bien?» con un toque</li>
                         <li><span>📋</span> Ver recordatorios del día</li>
                         <li><span>📞</span> Llamar a la familia con un toque</li>
                         <li><span>🔤</span> Letras grandes y claras</li>
@@ -1960,6 +2224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul class="profile-features">
                         <li><span>📊</span> Estado del check-in en tiempo real</li>
                         <li><span>🔔</span> Alertas si no hay actividad</li>
+                        <li><span>🙋</span> Preguntar «¿Estás bien?» al momento</li>
                         <li><span>💊</span> Crear recordatorios de medicación</li>
                         <li><span>📞</span> Recordatorios para llamar</li>
                         <li><span>⚙️</span> Configurar hora del check-in</li>
@@ -2042,11 +2307,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="reveal" style="max-width: 600px; margin: 48px auto 0; text-align: center; background: var(--white); border-radius: var(--radius); padding: 44px; border: 2px solid var(--gray-200); box-shadow: var(--shadow-md);">
                 <div style="font-size: 3rem; margin-bottom: 12px;">🆓</div>
                 <h3 style="font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: var(--gray-900); margin-bottom: 8px;">100% gratuita</h3>
-                <p style="font-size: 1.1rem; color: var(--gray-500); margin-bottom: 24px; line-height: 1.6;">Sin pagos, sin publicidad, sin letra pequeña. La tranquilidad de tu familia no debería tener barreras económicas.</p>
+                <p style="font-size: 1.1rem; color: var(--gray-500); margin-bottom: 24px; line-height: 1.6;">Sin pagos y sin letra pequeña. La tranquilidad de tu familia no debería tener barreras económicas.</p>
                 <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 0.95rem; color: var(--gray-700);">
                     <span style="display: flex; align-items: center; gap: 6px;"><span style="color: var(--verde); font-weight: 800;">✓</span> Sin costes ocultos</span>
-                    <span style="display: flex; align-items: center; gap: 6px;"><span style="color: var(--verde); font-weight: 800;">✓</span> Sin publicidad</span>
-                    <span style="display: flex; align-items: center; gap: 6px;"><span style="color: var(--verde); font-weight: 800;">✓</span> Sin venta de datos</span>
+                    <span style="display: flex; align-items: center; gap: 6px;"><span style="color: var(--verde); font-weight: 800;">✓</span> Android e iPhone</span>
                 </div>
             </div>
         </div>
@@ -2170,51 +2434,98 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="section-header reveal">
                 <span class="section-label">🏛️ Para ayuntamientos y entidades</span>
                 <h2 class="section-title">Ayuntamientos colaboradores</h2>
-                <p class="section-subtitle">Acercamos AiVamos a las personas vulnerables de tu municipio con talleres formativos <strong>presenciales u online</strong>. Los ayuntamientos que organicen estas formaciones reciben un reconocimiento institucional dentro de la app.</p>
+                <p class="section-subtitle">Con la <strong>licencia de uso</strong>, el ayuntamiento acompaña cada día a sus vecinos desde la app, y AiVamos puede formar parte de sus proyectos de Servicios Sociales. La app sigue siendo gratuita para todos los vecinos.</p>
             </div>
 
-            <div class="collab-main-card reveal">
-                <div class="collab-badge-showcase">
-                    <div class="collab-badge-icon">🏛️</div>
-                    <p class="collab-badge-label">Entidad colaboradora</p>
-                    <p class="collab-badge-sub">Insignia oficial visible dentro de AiVamos</p>
+            <!-- LICENCIA DE USO + PANEL MUNICIPAL -->
+            <div class="panel-block reveal" id="panel-municipal">
+                <div class="panel-block-header">
+                    <span class="section-label" style="color: var(--azul-deep);">🖥️ Licencia de uso · Panel municipal</span>
+                    <h3>Su ayuntamiento, presente cada día en el móvil de sus vecinos</h3>
+                    <p>Con la licencia de uso, el escudo del ayuntamiento y el teléfono de Servicios Sociales aparecen cada día en la app. Y desde un panel web propio, el ayuntamiento gestiona su ficha y consulta las estadísticas de su municipio, siempre anonimizadas.</p>
                 </div>
 
-                <div class="collab-content">
-                    <h3>Reconocimiento institucional para tu municipio</h3>
-                    <p class="collab-intro">
-                        Los ayuntamientos, mancomunidades y entidades locales que organicen talleres formativos sobre AiVamos —dirigidos a personas vulnerables, familiares cuidadores o equipos técnicos de servicios sociales— reciben una insignia oficial dentro de la aplicación como <strong>entidad colaboradora</strong>.
-                    </p>
+                <div class="panel-video">
+                    <video controls preload="none" playsinline poster="videos/aivamos-ayuntamientos-poster.jpg" aria-label="Vídeo: AiVamos para ayuntamientos">
+                        <source src="videos/aivamos-ayuntamientos.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este vídeo. <a href="videos/aivamos-ayuntamientos.mp4">Descárgalo aquí</a>.
+                    </video>
+                </div>
+                <p class="panel-video-caption">AiVamos para ayuntamientos · 1 min 36 s</p>
 
-                    <ul class="collab-list">
-                        <li>Insignia institucional visible para todos los usuarios</li>
-                        <li>Talleres formativos, adaptados a personas vulnerables o a equipos técnicos municipales</li>
-                        <li>Material formativo, soporte directo y atención personalizada</li>
-                        <li>Refuerzo de la imagen del ayuntamiento como entidad innovadora en el cuidado de personas vulnerables</li>
-                    </ul>
-
-                    <div class="collab-contact-box">
-                        <div class="collab-contact-row">
-                            <a href="mailto:apps.esenciales@gmail.com?subject=Información%20talleres%20AiVamos%20-%20Ayuntamiento&body=Hola%2C%0A%0AEstoy%20interesado%2Fa%20en%20recibir%20información%20sobre%20los%20talleres%20formativos%20de%20AiVamos%20para%20mi%20entidad.%0A%0AEntidad%3A%20%0APersona%20de%20contacto%3A%20%0ATeléfono%3A%20%0ATipo%20de%20taller%20de%20interés%20(presencial%20%2F%20online)%3A%20%0A%0AGracias." class="collab-btn" id="collabMailBtn">
-                                <span>✉️</span>
-                                <span>Escribir email</span>
-                            </a>
-                            <button type="button" class="collab-btn-secondary" id="collabCopyBtn" onclick="copyCollabEmail(event)">
-                                <span id="collabCopyIcon">📋</span>
-                                <span id="collabCopyText">Copiar email</span>
-                            </button>
+                <div class="panel-grid">
+                    <div class="panel-item">
+                        <div class="panel-item-icon">🏛️</div>
+                        <div>
+                            <h4>Su escudo en la app, cada día</h4>
+                            <p>Los vecinos del municipio, y sus familias, ven el logo del ayuntamiento en su pantalla principal.</p>
                         </div>
-                        <p class="collab-email-display">
-                            <span class="collab-email-label">Contacto directo:</span>
-                            <a href="mailto:apps.esenciales@gmail.com" class="collab-email-link" id="collabEmailLink">apps.esenciales@gmail.com</a>
-                        </p>
-                        <p class="collab-note">Respuesta en menos de 48h · Atendido personalmente por Alberto</p>
+                    </div>
+                    <div class="panel-item">
+                        <div class="panel-item-icon">📞</div>
+                        <div>
+                            <h4>Servicios Sociales a un toque</h4>
+                            <p>El teléfono de Servicios Sociales aparece en la app para llamar directamente, sin buscar el número.</p>
+                        </div>
+                    </div>
+                    <div class="panel-item">
+                        <div class="panel-item-icon">✏️</div>
+                        <div>
+                            <h4>Ficha gestionada por el ayuntamiento</h4>
+                            <p>Desde el panel web cambian ellos mismos el escudo, el teléfono, un mensaje (por ejemplo, «Jornada de mayores el 15 de noviembre») y un enlace, con vista previa de cómo se verá en la app.</p>
+                        </div>
+                    </div>
+                    <div class="panel-item">
+                        <div class="panel-item-icon">📊</div>
+                        <div>
+                            <h4>Estadísticas mensuales anonimizadas</h4>
+                            <p>Personas mayores que usan AiVamos en el municipio, % de días con «Hoy estoy bien», alertas sin confirmar y recordatorios confirmados. Descargables, sin nombres ni teléfonos.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="collab-fineprint reveal">
-                Los talleres formativos se realizan bajo condiciones específicas que se detallan al solicitar información, incluidos los aspectos organizativos y económicos. Cada propuesta se adapta al tamaño del municipio y al perfil de los asistentes.
+                <div class="license-compare">
+                    <div class="license-card vecinos">
+                        <p class="license-kicker">Para los vecinos</p>
+                        <p class="license-title">App AiVamos · Gratis, siempre</p>
+                        <ul>
+                            <li>Android y iPhone</li>
+                            <li>Check-in diario y avisos a la familia</li>
+                            <li>Recordatorios de medicación y citas</li>
+                        </ul>
+                    </div>
+                    <div class="license-card ayto">
+                        <p class="license-kicker">Para el ayuntamiento</p>
+                        <p class="license-title">Licencia de uso anual</p>
+                        <ul>
+                            <li>Su escudo en la app, cada día</li>
+                            <li>Teléfono de Servicios Sociales</li>
+                            <li>Panel web municipal</li>
+                            <li>Estadísticas mensuales anónimas</li>
+                            <li>Para sus proyectos de Servicios Sociales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="panel-teleasistencia"><strong>AiVamos no sustituye a la teleasistencia, la complementa:</strong> la teleasistencia responde ante una emergencia; AiVamos crea el hábito diario de estar en contacto con la familia.</p>
+
+                <div class="collab-contact-box" style="max-width: 640px; margin: 32px auto 0;">
+                    <div class="collab-contact-row" style="justify-content: center;">
+                        <a href="mailto:apps.esenciales@gmail.com?subject=Información%20licencia%20de%20uso%20AiVamos%20-%20Ayuntamiento&body=Hola%2C%0A%0AEstoy%20interesado%2Fa%20en%20recibir%20información%20sobre%20la%20licencia%20de%20uso%20de%20AiVamos%20para%20mi%20ayuntamiento.%0A%0AAyuntamiento%3A%20%0APersona%20de%20contacto%3A%20%0ATeléfono%3A%20%0A%0AGracias." class="collab-btn" id="collabMailBtn">
+                            <span>✉️</span>
+                            <span>Solicitar información de la licencia</span>
+                        </a>
+                        <button type="button" class="collab-btn-secondary" id="collabCopyBtn" onclick="copyCollabEmail(event)">
+                            <span id="collabCopyIcon">📋</span>
+                            <span id="collabCopyText">Copiar email</span>
+                        </button>
+                    </div>
+                    <p class="collab-email-display" style="justify-content: center;">
+                        <span class="collab-email-label">Contacto directo:</span>
+                        <a href="mailto:apps.esenciales@gmail.com" class="collab-email-link" id="collabEmailLink">apps.esenciales@gmail.com</a>
+                    </p>
+                    <p class="collab-note" style="text-align: center;">Respuesta en menos de 48h · Atendido personalmente por Alberto</p>
+                </div>
             </div>
         </div>
     </section>
